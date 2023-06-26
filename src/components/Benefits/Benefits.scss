@@ -1,0 +1,64 @@
+@import '../../styles/Styles.scss';
+
+.benefits-container{ @include displayStructure(flex, $align-items: center,$justify-content: center,$flex-direction: column,$text-align: left,$margin-top: 5rem );
+    
+    .heading{ @include displayStructure($text-align: center,$font-size: 2.5rem);
+    font-weight: bold;}
+    .Benefits-img{ @include displayStructure( $width: 6rem,$height: 6rem)}
+    .benefits-description{ @include displayStructure($max-width: 80%,$margin: auto)}
+    .Personal-Experience,
+    .Improved-Engagement,
+    .Actionable-Analytics
+    { @include displayStructure(flex,$align-items: center,$justify-content: space-between,$max-width: 65%)}
+
+}
+
+@include breakpoint(Mobile){
+    .benefits-container{ text-align: center;
+        .heading{ font-size: 2rem;
+        }
+        .benefits-description{
+            .benefit-name{font-size: 1.2rem;}
+        }
+        .Personal-Experience,
+        .Improved-Engagement,
+        .Actionable-Analytics
+        { @include displayStructure($flex-direction:column,$max-width: 85%,$margin-top:1.5rem)}
+}
+}
+
+@include breakpoint(Tablet){
+    .benefits-container{ 
+        .heading{ font-size: 2rem;
+        }
+        .benefits-description{
+            width:60%;
+            .benefit-name{font-size: 1rem; }
+        }
+        .Personal-Experience,
+        .Improved-Engagement,
+        .Actionable-Analytics
+        { @include displayStructure($max-width: 75%,$margin-top:1.5rem);
+        .Benefits-img{
+            width:20%;
+        }}
+    }
+
+}
+@include breakpoint(LargeScreen){
+    .benefits-container{ 
+        .heading{ font-size: 3.5rem;
+        }
+        .benefits-description{
+            .benefit-name{font-size: 2rem; }
+        }
+        .Personal-Experience,
+        .Improved-Engagement,
+        .Actionable-Analytics
+        { @include displayStructure($max-width: 65%,$margin-top:1.5rem, $font-size:1.5rem);
+        .Benefits-img{
+            width:15%;
+            height: 15%;
+        }}
+    }
+}

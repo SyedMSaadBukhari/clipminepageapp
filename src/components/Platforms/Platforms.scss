@@ -1,0 +1,36 @@
+@import '../../styles/Styles.scss';
+
+.platforms{
+    @include displayStructure(flex, column,$align-items: center,$justify-content:center);
+    background-color: $secondary-background-color;
+
+    .heading{ 
+        @include displayStructure($margin-top: 5rem,$font-size: 2.5rem,$text-align: center);
+        font-weight: bold;
+    }
+    
+    .platforms-container{
+        @include displayStructure(flex,$justify-content: space-between,$margin: 3rem,$max-width: 80%) ; 
+        
+    }    
+}
+
+@include breakpoint(Mobile){
+    .platforms{
+        .heading{font-size: 2rem;}
+    }   
+}
+
+@include breakpoint(Tablet){
+    .platforms{
+        .heading{font-size: 2rem;}
+    } 
+
+}
+
+@include breakpoint(LargeScreen){
+    .platforms{
+        .heading{font-size: 3rem;}
+    } 
+
+}

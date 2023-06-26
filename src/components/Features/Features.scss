@@ -1,0 +1,66 @@
+@import '../../styles/Styles.scss';
+
+.features{
+    @include displayStructure(flex, column,$justify-content: center,$align-items: center,$text-align: center,$margin-top: 4rem);
+    
+    .features-heading{@include displayStructure($color: $secondary-color,$font-size: 2.5rem);
+    font-weight: bold;}
+
+    .feature-container{@include displayStructure($justify-content: space-evenly,$text-align: center,$max-width: 80%,$margin: 2rem auto,$color: $secondary-color);
+        
+        .feature-card{ @include displayStructure(flex,$justify-content: center);
+            cursor: pointer;
+        }
+    }
+    .card{
+
+        .card-img{ @include displayStructure($padding: 10px,$max-width: 80%);
+            border: 0.5px solid rgb(206, 203, 203)}
+
+        .figure-title{ @include displayStructure($margin: auto,$max-width: 80%,$font-size: 1.2rem)}
+    
+    }   
+}
+
+@include breakpoint(Mobile){
+    .features{
+        .features-heading{@include displayStructure($font-size: 2rem);
+            }
+            .feature-container{
+                .feature-card{@include displayStructure($flex-direction: column, $align-items:center)}
+            }
+    }
+    .card{
+        .feature-description{font-size: 12px;}
+    }
+}
+
+@include breakpoint(Tablet){
+    .features{
+        .features-heading{@include displayStructure($font-size: 2rem);
+            }
+            .feature-container{
+                .feature-card{@include displayStructure($flex-direction: column, $align-items:center)}
+            }
+    }
+    .card{
+        .card-img{width: 50%}
+        .feature-description{font-size: 12px;}
+    }
+}
+@include breakpoint(LargeScreen){
+    .features{
+        .features-heading{@include displayStructure($font-size: 3.5rem);
+            }
+            .feature-container{
+                max-width: 100%;
+                .feature-card{@include displayStructure( $align-items:center)}
+            }
+    }
+    .card{
+        height: 20rem;
+        .card-img{width: 90%; height:10rem}
+        .feature-description{ margin: auto;}
+    }
+}
+

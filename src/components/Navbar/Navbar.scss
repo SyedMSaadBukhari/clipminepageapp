@@ -1,0 +1,40 @@
+@import '../../styles/Styles.scss';
+
+.navbar{
+    @include displayStructure(flex,$align-items: center,$height: auto, $width: 100%);
+
+        .logo{ @include displayStructure($height: 3rem,$width: 20%,$margin: 0.7rem)}
+
+        .menu{
+            @include displayStructure(flex,$align-items: center,$justify-content: space-between,$max-width: 100%);
+        
+            .menu-item{color: $text-primary-color; align-items: center; text-decoration: none }
+            .menu-left{@include displayStructure(flex, $width: 25%, $justify-content: left, $text-align: center, $list-style: none);}
+            .menu-right {@include displayStructure(flex, $width: 25%, $list-style: none, $text-align: center,$margin: 0.7rem);}
+        }
+}
+
+@include breakpoint(Mobile){
+    .navbar{
+    @include displayStructure($flex-direction: column);
+    .logo{ @include displayStructure($width:40%)}
+    .menu{@include displayStructure($flex-direction:column);
+        .menu-left{@include displayStructure($width:80%)}
+        .menu-right{@include displayStructure($width:80%)}
+    }
+    }
+}
+
+@include breakpoint(Tablet){
+    .navbar{
+        @include displayStructure($flex-direction: column);
+        .logo{ @include displayStructure($width:30%)}
+        .menu{@include displayStructure($flex-direction:row);
+
+            .menu-left{@include displayStructure($width:100%)}
+            .menu-right{@include displayStructure($width:100%)}
+
+    }
+}}
+
+

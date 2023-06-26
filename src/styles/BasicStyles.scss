@@ -1,0 +1,41 @@
+@mixin displayStructure(
+$display:           null, 
+$flex-direction:    null,
+$align-items:       null, 
+$justify-content:   null,
+$text-align:        null,
+$width:             null,
+$max-width:         null,
+$height:            null,
+$margin:            null,
+$margin-bottom:     null,
+$margin-top:        null,
+$margin-left:       null,
+$margin-right:      null,
+$list-style :       null,
+$padding:           null,
+$font-size:         null,
+$color:             null,
+$line-height:       null,
+)
+
+{
+    display:            $display;
+    flex-direction:     $flex-direction;
+    align-items:        $align-items;
+    justify-content:    $justify-content;
+    text-align:         $text-align;
+    width:              $width;
+    max-width:          $max-width;
+    height:             $height;
+    margin:             $margin;
+    margin-bottom:      $margin-bottom;
+    margin-top:         $margin-top;
+    margin-left:        $margin-left;
+    margin-right:       $margin-right;
+    list-style:         $list-style;
+    padding:            $padding;
+    font-size:          $font-size;
+    color:              $color;   
+    line-height:        $line-height;
+}

@@ -1,0 +1,47 @@
+@import '../../styles/Styles.scss';
+.partners{
+    @include displayStructure(flex,column,$align-items: center);
+    background-color:$secondary-background-color;
+    
+    .heading{ @include displayStructure($max-width: 80%,$font-size: 2.5rem,$text-align: center,$margin-top: 5rem);
+    font-weight: bold;}
+
+    .partners-container{ @include displayStructure(grid,$max-width: 90%, $margin-top: 2rem );
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        .ptnr-img{ max-width: 70%;}
+    }
+    .footer{ @include displayStructure($max-width: 80%,$text-align: center,$margin: 2.5rem)
+        
+    }
+}
+
+@include breakpoint(Mobile){
+    .partners{
+        .heading{
+            font-size: 2rem;
+        }
+        .partners-container{
+            grid-template-columns: repeat(2, 1fr);
+
+        .ptnr-img{max-width: 90%; }
+        }
+    }
+}
+
+@include breakpoint(Tablet){
+    .partners{
+        .heading{
+            font-size: 2rem;
+        }
+    }}
+
+    @include breakpoint(LargeScreen){
+        .partners{
+            .heading{
+                font-size: 3.5rem;
+            }
+        }
+    }
