@@ -4,7 +4,7 @@
     @include displayStructure(flex,column,$align-items: center,$justify-content: center);
 
     .heading{
-        @include displayStructure($margin-top: 5rem,$max-width: 80%,$font-size: 2.5rem,$text-align: center);
+        @include displayStructure($margin-top: 3rem,$max-width: 80%,$font-size: 2.5rem,$text-align: center);
         font-weight: bold;
     }
 
@@ -28,11 +28,11 @@
 
 @include breakpoint(Mobile){
     .tag-page{
-        .heading{ font-size: 2rem;}
-    .tag-container{ @include displayStructure($flex-direction: column, $max-width:80%,$align-items:center);
+        .heading{ font-size: 1.5rem;}
+    .tag-container{ @include displayStructure($flex-direction: column, $max-width:80%,$align-items:center, $margin-top:3rem);
         #link{
             max-width: 100%;
-            font-size: 10px;
+            font-size: 12px;
         }
         .tag-button{
             margin-top: 0.8rem;
@@ -46,23 +46,22 @@
 @include breakpoint(Tablet){
     .tag-page{
         .heading{ font-size: 2rem;}
-    .tag-container{ @include displayStructure($max-width:80%,$justify-content:center);
-        #link{
-            max-width: 60%;
-            font-size: 10px;
+        .tag-container{ @include displayStructure($max-width:80%,$justify-content:center);
+            #link{
+                max-width: 60%;
+                font-size: 10px;
+            }
+            .tag-button{
+                max-width: 20%;
+            }
         }
-        .tag-button{
-            
-            max-width: 20%;
-            
     }
-    }
-}
-
 }
 @include breakpoint(LargeScreen){
     .tag-page{
-        .heading{ font-size: 3.5rem;}
+        max-width: 115rem;
+        margin:auto;
+        .heading{ font-size: 2.5rem;}
     .tag-container{ @include displayStructure($max-width:80%,$justify-content:center);
         #link{
             max-width: 60%;

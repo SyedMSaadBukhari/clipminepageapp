@@ -1,7 +1,7 @@
 @import '../../styles/Styles.scss';
 
 .features{
-    @include displayStructure(flex, column,$justify-content: center,$align-items: center,$text-align: center,$margin-top: 4rem);
+    @include displayStructure(flex, column,$justify-content: center,$align-items: center,$text-align: center,$margin-top: 2rem);
     
     .features-heading{@include displayStructure($color: $secondary-color,$font-size: 2.5rem);
     font-weight: bold;}
@@ -24,19 +24,22 @@
 
 @include breakpoint(Mobile){
     .features{
-        .features-heading{@include displayStructure($font-size: 2rem);
+        margin-top: 3rem;
+        .features-heading{@include displayStructure($font-size: 1.5rem);
             }
             .feature-container{
                 .feature-card{@include displayStructure($flex-direction: column, $align-items:center)}
             }
     }
     .card{
+        
         .feature-description{font-size: 12px;}
     }
 }
 
 @include breakpoint(Tablet){
     .features{
+        margin-top: 2rem;
         .features-heading{@include displayStructure($font-size: 2rem);
             }
             .feature-container{
@@ -50,16 +53,18 @@
 }
 @include breakpoint(LargeScreen){
     .features{
-        .features-heading{@include displayStructure($font-size: 3.5rem);
+        max-width: 115rem;
+        margin: auto;
+        .features-heading{@include displayStructure($font-size: 2.5rem);
             }
             .feature-container{
-                max-width: 100%;
+                max-width: 70%;
                 .feature-card{@include displayStructure( $align-items:center)}
             }
     }
     .card{
-        height: 20rem;
-        .card-img{width: 90%; height:10rem}
+        height: 30rem;
+        .card-img{width: 75%; height:8rem}
         .feature-description{ margin: auto;}
     }
 }

@@ -5,7 +5,7 @@
     background-color: $secondary-background-color;
 
     .heading{ 
-        @include displayStructure($margin-top: 5rem,$font-size: 2.5rem,$text-align: center);
+        @include displayStructure($margin-top: 2rem,$font-size: 2.5rem,$text-align: center);
         font-weight: bold;
     }
     
@@ -17,7 +17,7 @@
 
 @include breakpoint(Mobile){
     .platforms{
-        .heading{font-size: 2rem;}
+        .heading{font-size: 1.5rem;}
     }   
 }
 
@@ -30,7 +30,9 @@
 
 @include breakpoint(LargeScreen){
     .platforms{
-        .heading{font-size: 3rem;}
+        max-width: 115rem;
+        margin: auto;
+        .heading{font-size: 2.5rem;}
     } 
 
 }

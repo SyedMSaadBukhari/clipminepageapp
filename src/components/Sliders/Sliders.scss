@@ -8,10 +8,10 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    .heading{ @include displayStructure($width: 45%,$font-size: 2.5rem) }
-    .description{ @include displayStructure($max-width: 35%,$text-align: center)}
+    .heading{ @include displayStructure($width: 50%,$font-size: 2.5rem) }
+    .description{ @include displayStructure($max-width: 45%,$text-align: center)}
     .signup-button{
-        @include displayStructure($margin-top:1rem, $width:25%, $padding:1.5rem 5rem);
+        @include displayStructure($margin-top:1rem,$width: 8rem, $padding:1rem 2rem);
         color: $primary-color;
         background-color: $button-primary-color;
         cursor: pointer; 
@@ -20,19 +20,21 @@
 
 @include breakpoint(Mobile){
     .sliders{
+        background-size: 170% 100%;
         @include displayStructure($height:50vh);
         .heading{@include displayStructure($width:90%,$font-size: 1.5rem)}
         .description{ @include displayStructure($max-width: 85%,$text-align: center)}
-        .signup-button{@include displayStructure($width:55%,$padding:1rem 5rem, $font-size:0.7rem ) }
+        .signup-button{@include displayStructure($width:8rem,$padding:1rem 2rem, $font-size:0.7rem) }
     }
 }
 
 @include breakpoint(Tablet){
     .sliders{
-        @include displayStructure($height:50vh);
-        .heading{@include displayStructure($width:90%,$font-size: 2rem)}
-        .description{ @include displayStructure($max-width: 85%,$text-align: center)}
-        .signup-button{@include displayStructure($width:35%,$padding:1rem 2rem, $font-size:0.7rem ) }
+        background-size: 170% 100%;
+        @include displayStructure($height:55vh);
+        .heading{@include displayStructure($width:70%,$font-size: 2rem)}
+        .description{ @include displayStructure($max-width: 65%,$text-align: center)}
+        .signup-button{@include displayStructure($width:8rem,$padding:1rem 2rem, $font-size:0.7rem ) }
     }
 
 }

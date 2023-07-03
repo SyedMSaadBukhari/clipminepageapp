@@ -1,7 +1,7 @@
 @import '../../styles/Styles.scss';
 
 .video-collections{ 
-    @include displayStructure(flex, column,$justify-content: space-between,$align-items: center,$margin-top:5rem,$margin-bottom: 5rem,$height: 60vh);
+    @include displayStructure(flex, column,$justify-content: space-around,$align-items: center,$margin-top:3rem,$margin-bottom: 3rem,$height: 60vh);
     .heading{ @include displayStructure($font-size: 2.5rem,$max-width: 80%,$text-align: center);
     font-weight: bold;}
 
@@ -9,14 +9,14 @@
         @include displayStructure(flex,row,$justify-content: space-between,$height:60%,$width: 70%,$font-size: 1.8rem,$text-align:center,$color: $primary-color);
         
         .startups{ 
-        @include displayStructure($width: 45%);
+        @include displayStructure($width: 45%, $line-height: 13rem);
         position: relative;
             background-image: url(../../clipminepage/collections/collection-startup_920x368.png);
             background-repeat: no-repeat;
             
         }
         .machineLearning{
-            @include displayStructure($width: 45%);
+            @include displayStructure($width: 45%, $line-height: 13rem);
             background-image: url(../../clipminepage/collections/collection-ml_922x368.png);
             background-repeat: no-repeat;
         }
@@ -28,11 +28,13 @@
 
 @include breakpoint(Mobile){
     .video-collections{
-        .heading{font-size: 2rem; height: 10rem;}
+        margin-top: 2rem;
+        height: 90vh;
+        .heading{font-size: 1.5rem}
         .video-container{flex-direction: column; font-size: 1rem;
-            .startups,.machineLearning{width: 100%;height: 45%}}
+            .startups,.machineLearning{width: 100%;height: 45%; line-height: 9rem;}}
         .footer{
-            @include displayStructure($max-width: 80%, $font-size:11px, $height:5rem, $margin-top:3rem);   
+            @include displayStructure($max-width: 80%, $font-size:11px);   
         }
     }
     
@@ -41,8 +43,10 @@
 
 @include breakpoint(Tablet){
     .video-collections{
-        .heading{font-size: 2rem; height: 10rem;}
-        .video-container{ font-size: 1rem;}
+        .heading{font-size: 2rem;}
+        .video-container{ font-size: 1rem;
+            padding-top: 1rem;
+            .startups,.machineLearning{ line-height: 13rem;}}
         .footer{
             @include displayStructure($max-width: 80%, $font-size:11px, $height:5rem, $margin-top:3rem);   
         }
@@ -51,6 +55,10 @@
 }
 @include breakpoint(LargeScreen){
     .video-collections{
-        .heading{font-size: 3.5rem;}}
-        .footer{font-size: 1.5rem; }
+        .heading{font-size: 2rem}
+        max-width: 115rem;
+        margin:auto;
+        .video-container{ font-size: 1.5rem;
+            .startups,.machineLearning{ line-height: 19rem;}}
+    }
 }

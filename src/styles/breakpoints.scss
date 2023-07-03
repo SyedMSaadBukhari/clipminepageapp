@@ -10,7 +10,7 @@
         }
     }
     @else if $device == LargeScreen {
-        @media screen and (min-width:1441px)  {
+        @media screen and (min-width:1025px)  {
             @content;
         }
     }

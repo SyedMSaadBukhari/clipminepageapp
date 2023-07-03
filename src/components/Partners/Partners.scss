@@ -3,7 +3,7 @@
     @include displayStructure(flex,column,$align-items: center);
     background-color:$secondary-background-color;
     
-    .heading{ @include displayStructure($max-width: 80%,$font-size: 2.5rem,$text-align: center,$margin-top: 5rem);
+    .heading{ @include displayStructure($max-width: 80%,$font-size: 2.5rem,$text-align: center,$margin-top: 3rem);
     font-weight: bold;}
 
     .partners-container{ @include displayStructure(grid,$max-width: 90%, $margin-top: 2rem );
@@ -21,7 +21,7 @@
 @include breakpoint(Mobile){
     .partners{
         .heading{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .partners-container{
             grid-template-columns: repeat(2, 1fr);
@@ -40,8 +40,10 @@
 
     @include breakpoint(LargeScreen){
         .partners{
+            max-width: 115rem;
+            margin:auto;
             .heading{
-                font-size: 3.5rem;
+                font-size: 2.5rem;
             }
         }
     }

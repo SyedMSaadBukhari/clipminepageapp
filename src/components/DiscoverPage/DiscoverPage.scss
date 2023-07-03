@@ -13,7 +13,7 @@
             $margin-top: 2rem,
             $color: $secondary-color,
             $font-size: 1.5rem);
-        font-weight: bold;
+            font-weight: bold;
     }
 
     .clipmine-def {
@@ -28,7 +28,7 @@
             $max-width: 85%,
             $justify-content: space-evenly,
             $margin: auto);
-        box-sizing: border-box;
+            box-sizing: border-box;
 
         .discover-card {
             @include displayStructure(flex,
@@ -36,7 +36,7 @@
                 $max-width: 15.6rem,
                 $align-items: center,
                 $text-align: left);
-            cursor: pointer;
+                cursor: pointer;
         }
 
         .tags {
@@ -79,7 +79,7 @@
         @include displayStructure($height: 200vh);
 
         .subheading {
-            @include displayStructure($max-width: 90%,
+            @include displayStructure(
                 $font-size: 1rem,
                 $height: 4rem);
         }
@@ -94,7 +94,8 @@
             @include displayStructure($flex-direction: column,
                 $width: 85%,
                 $justify-content: center,
-                $align-items: center);
+                $align-items: center,
+                $margin-top: 0.5rem);
 
             .discover-card {
                 @include displayStructure($margin-top: 1rem, $height: 50%);
@@ -140,40 +141,45 @@
 
 @include breakpoint(LargeScreen) {
     .discoverpage {
+        max-width: 115rem;
+        margin: auto;
+        max-height: 55rem;
         .subheading {
-            @include displayStructure($font-size: 2rem);
+            @include displayStructure($font-size: 1.5rem);
         }
 
         .clipmine-def {
-            @include displayStructure($font-size: 1.5rem,
-                $margin: auto,
-                $max-width: 90%);
+            @include displayStructure($font-size: 1rem,
+                
+                $max-width: 60%);
         }
 
         .card-container {
-            max-width: 90%;
+            max-width: 60%;
+            margin: auto;
 
             .discover-card {
                 max-width: 30%;
+                
             }
 
             .tags {
-                @include displayStructure($font-size: 1.2rem,
-                    $margin: auto,
+                @include displayStructure($font-size: 1rem,
+                    
                     $max-width: 100%);
             }
 
             .embed {
-                @include displayStructure($max-width: 100%, $font-size: 1.2rem);
+                @include displayStructure($max-width: 100%, $font-size: 1rem);
             }
         }
 
         .card {
-            @include displayStructure($width: 100%);
+            @include displayStructure($width: 100%, $height:30vh);
 
             .description {
                 .video-description {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                 }
             }
         }

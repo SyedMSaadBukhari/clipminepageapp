@@ -1,6 +1,6 @@
 @import '../../styles/Styles.scss';
 
-.benefits-container{ @include displayStructure(flex, $align-items: center,$justify-content: center,$flex-direction: column,$text-align: left,$margin-top: 5rem );
+.benefits-container{ @include displayStructure(flex, $align-items: center,$justify-content: center,$flex-direction: column,$text-align: left,$margin-top: 1rem );
     
     .heading{ @include displayStructure($text-align: center,$font-size: 2.5rem);
     font-weight: bold;}
@@ -14,11 +14,11 @@
 }
 
 @include breakpoint(Mobile){
-    .benefits-container{ text-align: center;
-        .heading{ font-size: 2rem;
+    .benefits-container{ text-align: center; margin-top: 2rem;
+        .heading{ font-size: 1.5rem;
         }
         .benefits-description{
-            .benefit-name{font-size: 1.2rem;}
+            .benefit-name{font-size: 1rem;}
         }
         .Personal-Experience,
         .Improved-Engagement,
@@ -29,10 +29,11 @@
 
 @include breakpoint(Tablet){
     .benefits-container{ 
+        margin-top: 1rem;
         .heading{ font-size: 2rem;
         }
         .benefits-description{
-            width:60%;
+            width:80%;
             .benefit-name{font-size: 1rem; }
         }
         .Personal-Experience,
@@ -40,22 +41,25 @@
         .Actionable-Analytics
         { @include displayStructure($max-width: 75%,$margin-top:1.5rem);
         .Benefits-img{
-            width:20%;
+            width:6rem;
         }}
     }
 
 }
 @include breakpoint(LargeScreen){
     .benefits-container{ 
-        .heading{ font-size: 3.5rem;
+        max-width: 115rem;
+        margin: auto;
+        .heading{ font-size: 2.5rem;
+            margin-top: 1rem;
         }
         .benefits-description{
-            .benefit-name{font-size: 2rem; }
+            .benefit-name{font-size: 1.5rem; }
         }
         .Personal-Experience,
         .Improved-Engagement,
         .Actionable-Analytics
-        { @include displayStructure($max-width: 65%,$margin-top:1.5rem, $font-size:1.5rem);
+        { @include displayStructure($max-width: 65%,$margin-top:1.5rem, $font-size:1.2rem);
         .Benefits-img{
             width:15%;
             height: 15%;
